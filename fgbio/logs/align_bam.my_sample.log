@@ -1,0 +1,26 @@
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::bam2fq_mainloop] discarded 0 singletons
+[M::bam2fq_mainloop] processed 99958 reads
+[M::process] read 99958 sequences (14993700 bp)...
+[M::process] 0 single-end sequences; 99958 paired-end sequences
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (0, 49979, 0, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (466, 500, 534)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (330, 670)
+[M::mem_pestat] mean and std.dev: (499.84, 50.50)
+[M::mem_pestat] low and high boundaries for proper pairs: (262, 738)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 99958 reads in 2.143 CPU sec, 0.271 real sec
+[2023/05/24 08:16:47 | FgBioMain | Info] Executing ZipperBams from fgbio version 2.1.0 as kenny@Kennys-MacBook-Pro.local on JRE 17.0.3+7-LTS with snappy, JdkInflater, and JdkDeflater
+[2023/05/24 08:16:47 | ZipperBams | Warning] input file /dev/stdin does not appear to be queryname sorted or grouped.
+[2023/05/24 08:16:47 | ZipperBams | Warning] Continuing, but your output may be incorrect.
+[2023/05/24 08:16:48 | ZipperBams | Info] Tags being reversed: cd, ce, ad, ae, bd, be, aq, bq
+[2023/05/24 08:16:48 | ZipperBams | Info] Tags being reverse complemented: ac, bc
+[2023/05/24 08:16:48 | SamWriter | Info] Seen many non-increasing record positions. Printing Read-names as well.
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 8 -p -K 150000000 -Y hs38DH/hs38DH.fa -
+[main] Real time: 2.382 sec; CPU: 2.327 sec
+[2023/05/24 08:16:48 | SamWriter | Info] Wrote         99,958 records.  Elapsed time: 00:00:00s.  Time for last 99,958:    0s.  Last read position: gi|9626372|ref|NC_001422.1|:4,512.  Last read name: gi|9626372|ref|NC_001422.1|:4511-5070:10000/B:6
+[2023/05/24 08:16:48 | FgBioMain | Info] ZipperBams completed. Elapsed time: 0.04 minutes.

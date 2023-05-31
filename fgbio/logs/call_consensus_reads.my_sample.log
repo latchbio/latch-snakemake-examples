@@ -1,0 +1,13 @@
+[2023/05/24 08:16:53 | FgBioMain | Info] Executing CallMolecularConsensusReads from fgbio version 2.1.0 as kenny@Kennys-MacBook-Pro.local on JRE 17.0.3+7-LTS with snappy, JdkInflater, and JdkDeflater
+[2023/05/24 08:16:53 | CallMolecularConsensusReads | Info] Seen many non-increasing record positions. Printing Read-names as well.
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info] Consensus calling overlapping read pairs statistics:
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info]     5 overlapping templates
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info]     0 corrected templates (0.00%)
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info]     0 overlapping bases
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info]     0 corrected bases (0.00%)
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info] processed        99,958 records.  Elapsed time: 00:00:01s.  Time for last 99,958:    1s.  Last read position: gi|9626372|ref|NC_001422.1|:4,787.  Last read name: gi|9626372|ref|NC_001422.1|:4786-5269:4855/B:4
+[2023/05/24 08:16:54 | SamWriter | Info] Wrote         38,296 records.  Elapsed time: 00:00:01s.  Time for last 38,296:    1s.  Last read position: */*
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info] Total Raw Reads Considered: 99,958.
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info] Raw Reads Filtered Due to Insufficient Support: 0 (0.0000).
+[2023/05/24 08:16:54 | CallMolecularConsensusReads | Info] Consensus reads emitted: 38,296.
+[2023/05/24 08:16:54 | FgBioMain | Info] CallMolecularConsensusReads completed. Elapsed time: 0.04 minutes.

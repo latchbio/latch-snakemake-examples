@@ -1,0 +1,7 @@
+.logs
+.latch
+.snakemake
+.latch_report.tar.gz
+
+__pycache__
+*.sw*

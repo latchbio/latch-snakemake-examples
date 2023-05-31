@@ -1,0 +1,12 @@
+[2023/05/24 08:16:50 | FgBioMain | Info] Executing GroupReadsByUmi from fgbio version 2.1.0 as kenny@Kennys-MacBook-Pro.local on JRE 17.0.3+7-LTS with snappy, JdkInflater, and JdkDeflater
+[2023/05/24 08:16:50 | GroupReadsByUmi | Info] Filtering the input.
+[2023/05/24 08:16:50 | GroupReadsByUmi | Info] Sorting the input to TemplateCoordinate order.
+[2023/05/24 08:16:50 | GroupReadsByUmi | Info] Seen many non-increasing record positions. Printing Read-names as well.
+[2023/05/24 08:16:50 | GroupReadsByUmi | Info] Sorted        99,958 records.  Elapsed time: 00:00:00s.  Time for last 99,958:    0s.  Last read position: gi|9626372|ref|NC_001422.1|:4,512.  Last read name: gi|9626372|ref|NC_001422.1|:4511-5070:10000/B:6
+[2023/05/24 08:16:51 | GroupReadsByUmi | Info] Accepted 99,958 reads for grouping.
+[2023/05/24 08:16:51 | GroupReadsByUmi | Info] Filtered out 0 reads due to mapping issues.
+[2023/05/24 08:16:51 | GroupReadsByUmi | Info] Filtered out 0 reads that contained one or more Ns in their UMIs.
+[2023/05/24 08:16:51 | GroupReadsByUmi | Info] Assigning reads to UMIs and outputting.
+[2023/05/24 08:16:51 | SamWriter | Info] Seen many non-increasing record positions. Printing Read-names as well.
+[2023/05/24 08:16:51 | SamWriter | Info] Wrote         99,958 records.  Elapsed time: 00:00:01s.  Time for last 99,958:    0s.  Last read position: gi|9626372|ref|NC_001422.1|:4,787.  Last read name: gi|9626372|ref|NC_001422.1|:4786-5269:4855/B:4
+[2023/05/24 08:16:51 | FgBioMain | Info] GroupReadsByUmi completed. Elapsed time: 0.05 minutes.

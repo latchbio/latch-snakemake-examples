@@ -1,0 +1,4 @@
+[2023/05/24 08:16:45 | FgBioMain | Info] Executing FastqToBam from fgbio version 2.1.0 as kenny@Kennys-MacBook-Pro.local on JRE 17.0.3+7-LTS with snappy, JdkInflater, and JdkDeflater
+[2023/05/24 08:16:45 | FastqToBam | Info] Could not uniquely determine quality encoding. Using Standard, other valid encodings: Solexa, Illumina
+[2023/05/24 08:16:46 | SamWriter | Info] Wrote         99,958 records.  Elapsed time: 00:00:00s.  Time for last 99,958:    0s.  Last read position: */*
+[2023/05/24 08:16:46 | FgBioMain | Info] FastqToBam completed. Elapsed time: 0.04 minutes.
