@@ -13,13 +13,13 @@ copy environment.yaml /root/environment.yaml
 run /root/mambaforge/bin/mamba env create --name snakemake-tutorial --file environment.yaml
 env PATH /root/mambaforge/envs/snakemake-tutorial/bin:$PATH
 
-copy latch /root/latch 
-run cd /root/latch && python3 -m pip install -e .
+copy latch_src /root/latch_src
+run cd /root/latch_src && python3 -m pip install -e .
 
 copy Snakefile config.yaml /root/
 copy scripts/plot-quals.py /root/scripts/plot-quals.py
 
-copy .latch/latch_entrypoint.py /root/latch_entrypoint.py
+copy .latch/jit_entrypoint.py /root/jit_entrypoint.py
 arg tag
 env FLYTE_INTERNAL_IMAGE $tag
 workdir /root

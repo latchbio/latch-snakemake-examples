@@ -1,3 +1,29 @@
+from latch.types.metadata import SnakemakeMetadata, SnakemakeFileParameter
+from latch.types.directory import LatchDir
+from latch.types.metadata import LatchAuthor, LatchMetadata, LatchParameter
+
+SnakemakeMetadata(
+    output_dir = LatchDir("latch:///sample_output"),
+    display_name="snakemake_tutorial_workflow",
+    author=LatchAuthor(
+            name="Kenneth",
+    ),
+    parameters={
+        "samples" : SnakemakeFileParameter(
+                display_name="Sample Input Directory",
+                description="A directory full of FastQ files",
+                type=LatchDir,
+                path=Path("data/samples"),
+        ),
+        "ref_genome" : SnakemakeFileParameter(
+                display_name="Indexed Reference Genome",
+                description="A directory with a reference Fasta file and the 6 index files produced from `bwa index`",
+                type=LatchDir,
+                path=Path("genome"),
+        ),
+    },
+)
+
 SAMPLES = ["A", "B"]
 
 
@@ -8,18 +34,18 @@ rule all:
 
 rule bwa_map:
     input:
-        "data/genome.fa",
+        "genome/genome.fa",
         "data/samples/{sample}.fastq",
-        "data/genome.fa.amb",
-        "data/genome.fa.ann", 
-        "data/genome.fa.bwt", 
-        "data/genome.fa.fai", 
-        "data/genome.fa.pac", 
-        "data/genome.fa.sa"
+        "genome/genome.fa.amb",
+        "genome/genome.fa.ann", 
+        "genome/genome.fa.bwt", 
+        "genome/genome.fa.fai", 
+        "genome/genome.fa.pac", 
+        "genome/genome.fa.sa"
     output:
         "mapped_reads/{sample}.bam"
     shell:
-        "bwa mem data/genome.fa data/samples/{wildcards.sample}.fastq | samtools view -Sb - > {output}"
+        "bwa mem genome/genome.fa data/samples/{wildcards.sample}.fastq | samtools view -Sb - > {output}"
 
 
 rule samtools_sort:
@@ -43,7 +69,7 @@ rule samtools_index:
 
 rule bcftools_call:
     input:
-        fa="data/genome.fa",
+        fa="genome/genome.fa",
         bam=expand("sorted_reads/{sample}.bam", sample=SAMPLES),
         bai=expand("sorted_reads/{sample}.bam.bai", sample=SAMPLES)
     output:

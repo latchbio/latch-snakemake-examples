@@ -22,5 +22,5 @@ copy . /root/
 
 arg tag
 env FLYTE_INTERNAL_IMAGE $tag
-copy .latch/latch_entrypoint.py /root/latch_entrypoint.py
+copy .latch/jit_entrypoint.py /root/jit_entrypoint.py
 workdir /root
