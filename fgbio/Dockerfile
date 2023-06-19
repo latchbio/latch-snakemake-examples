@@ -9,12 +9,14 @@ run apt-get update --yes && \
     curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     mkdir /root/.conda && \
     bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
-    rm -f Miniconda3-latest-Linux-x86_64.sh && \
-    conda init bash
+    rm -f Miniconda3-latest-Linux-x86_64.sh 
 
 copy environment.yaml /opt/latch/environment.yaml
 run conda env create --file /opt/latch/environment.yaml --name workflow
 env PATH=/opt/conda/envs/workflow/bin:$PATH
+
+copy latch_src /root/latch_src
+run cd /root/latch_src && python3 -m pip install -e .
 
 copy . /root/
 

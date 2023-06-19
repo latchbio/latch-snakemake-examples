@@ -2,6 +2,7 @@
 .latch
 .snakemake
 .latch_report.tar.gz
+latch_src
 
 __pycache__
 *.sw*

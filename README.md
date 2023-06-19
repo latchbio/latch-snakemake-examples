@@ -6,6 +6,7 @@ co-development.
 
 ```
 cd fgbio
+cp -r latch latch_src # Copy python souce so branch is available in container
 latch register . -s Snakefile
 ```
 
