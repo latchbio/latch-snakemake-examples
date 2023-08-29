@@ -10,35 +10,6 @@
 ################################################################################
 
 import glob
-from latch.types.metadata import SnakemakeMetadata, SnakemakeFileParameter
-from latch.types.directory import LatchDir
-from latch.types.file import LatchFile
-from latch.types.metadata import LatchAuthor, LatchMetadata, LatchParameter
-
-SnakemakeMetadata(
-	output_dir = LatchDir("latch:///sample_output"),
-	display_name="fgbio",
-	author=LatchAuthor(
-			name="Fulcrum Genomics",
-	),
-	parameters={
-		"r1_fastq" : SnakemakeFileParameter(
-				display_name="Read 1 FastQ",
-				type=LatchFile,
-				path=Path("r1.fq.gz"),
-		),
-		"r2_fastq" : SnakemakeFileParameter(
-				display_name="Read 2 FastQ",
-				type=LatchFile,
-				path=Path("r2.fq.gz"),
-		),
-		"genome" : SnakemakeFileParameter(
-				display_name="Genome Dir",
-				type=LatchDir,
-				path=Path("ref_genome"),
-		),
-	},
-)
 
 # Adjust these parameters to match your dataset
 r1_fastq          = "r1.fq.gz"
@@ -46,13 +17,14 @@ r2_fastq          = "r2.fq.gz"
 r1_read_structure = "8M+T"
 r2_read_structure = "8M+T"
 
-genome            = glob.glob("ref_genome/*.fa")[0]
-genome_idx_amb    = glob.glob("ref_genome/*.fa.amb")[0]
-genome_idx_ann    = glob.glob("ref_genome/*.fa.ann")[0]
-genome_idx_bwt    = glob.glob("ref_genome/*.fa.bwt")[0]
-genome_idx_pac    = glob.glob("ref_genome/*.fa.pac")[0]
-genome_idx_sa    = glob.glob("ref_genome/*.fa.sa")[0]
-genome_dict    = glob.glob("ref_genome/*.dict")[0]
+if Path("ref_genome").exists():
+		genome            = glob.glob("ref_genome/*.fa")[0]
+		genome_idx_amb    = glob.glob("ref_genome/*.fa.amb")[0]
+		genome_idx_ann    = glob.glob("ref_genome/*.fa.ann")[0]
+		genome_idx_bwt    = glob.glob("ref_genome/*.fa.bwt")[0]
+		genome_idx_pac    = glob.glob("ref_genome/*.fa.pac")[0]
+		genome_idx_sa    = glob.glob("ref_genome/*.fa.sa")[0]
+		genome_dict    = glob.glob("ref_genome/*.dict")[0]
 
 # Since both rules can generate a uBam...
 ruleorder: call_consensus_reads > fastq_to_ubam
@@ -98,7 +70,7 @@ rule align_bam:
         idx3 = genome_idx_bwt,
         idx4 = genome_idx_pac,
         idx5 = genome_idx_sa,
-        dict = genome_dict
+        dict = genome_dict,
     output:
         bam = "{prefix}.mapped.bam"
     threads:
@@ -180,7 +152,7 @@ rule filter_consensus_reads:
         idx3 = genome_idx_bwt,
         idx4 = genome_idx_pac,
         idx5 = genome_idx_sa,
-        dict = genome_dict
+        dict = genome_dict,
     output:
         bam = "{sample}.cons.filtered.bam",
     params:

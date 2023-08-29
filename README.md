@@ -5,14 +5,14 @@ Intended to test Snakemake support on latch and provide examples for
 co-development.
 
 ```
-cd fgbio
-cp -r latch latch_src # Copy python souce so branch is available in container
-latch register . -s Snakefile
+pip install 'latch[snakemake]'
 ```
 
-### Installing latch from branch
+[Documentation](https://docs.latch.bio/manual/snakemake.html)
 
-```
-git checkout kenny/snakekit
-pip install -e ".[snakemake]"
-```
+## fgbio
+
+A set of tools to analyze genomic data [developed by Fulcrum Genomics](https://github.com/fulcrumgenomics/fgbio).
+
+
+`cd fgbio && latch register .  --snakefile FastqToConsensus-RnD.smk`

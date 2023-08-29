@@ -1,9 +1,0 @@
-[2023/05/24 08:16:58 | FgBioMain | Info] Executing FilterConsensusReads from fgbio version 2.1.0 as kenny@Kennys-MacBook-Pro.local on JRE 17.0.3+7-LTS with snappy, JdkInflater, and JdkDeflater
-[2023/05/24 08:16:58 | FilterConsensusReads | Info] Filtering reads.
-[2023/05/24 08:16:59 | SamWriter | Info] Seen many non-increasing record positions. Printing Read-names as well.
-[2023/05/24 08:16:59 | FilterConsensusReads | Info] Finalizing the output
-[2023/05/24 08:16:59 | SamWriter | Info] Wrote         19,452 records.  Elapsed time: 00:00:00s.  Time for last 19,452:    0s.  Last read position: gi|9626372|ref|NC_001422.1|:4,787.  Last read name: my_sample:19147
-[2023/05/24 08:16:59 | FilterConsensusReads | Info] Output 19,452 of 38,296 primary consensus reads.
-[2023/05/24 08:16:59 | FilterConsensusReads | Info] Masked 0 of 2,917,800 bases in retained primary consensus reads.
-[2023/05/24 08:16:59 | FgBioMain | Info] FilterConsensusReads completed. Elapsed time: 0.04 minutes.
-[bam_sort_core] merging from 0 files and 8 in-memory blocks...
