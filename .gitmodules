@@ -1,3 +1,6 @@
 [submodule "kraken2_classification"]
 	path = kraken2_classification
 	url = https://github.com/latchbio/snakemake_kraken2_classification.git
+[submodule "sv-callers"]
+	path = sv-callers
+	url = https://github.com/latchbio/snakemake-sv-callers.git
