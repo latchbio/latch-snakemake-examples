@@ -1,8 +1,8 @@
-.logs
-.latch
-.snakemake
-.latch_report.tar.gz
+*.logs
+*.latch
+*.snakemake
+*.latch_report.tar.gz
 latch_src
 
-__pycache__
+*__pycache__
 *.sw*

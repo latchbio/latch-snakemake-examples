@@ -1,0 +1,32 @@
+#
+# This workflow includes several structural variant (SV) detection and
+# post-processing tools for detecting somatic or germline SVs in single- or
+# paired-sample WGS data, respectively.
+#
+
+import os
+os.chdir("workflow")
+
+from helper_functions import *
+
+__author__ = "Arnold Kuzniar"
+__version__ = "1.2.1"
+__license__ = "Apache License, Version 2.0"
+
+
+localrules:
+    all,
+
+
+rule all:
+    input:
+        make_all(),
+
+
+# include rules
+include: "rules/manta.smk"
+include: "rules/delly.smk"
+include: "rules/lumpy.smk"
+include: "rules/gridss.smk"
+include: "rules/viola.smk"
+include: "rules/survivor.smk"

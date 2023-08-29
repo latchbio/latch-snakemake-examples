@@ -1,0 +1,17 @@
+---
+name: caller
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - manta=1.1.0
+  - delly=0.7.7
+  - lumpy-sv=0.2.13
+  - gridss=1.3.4
+  - samblaster=0.1.24
+  - bc=1.06
+  - r-base=3.5.1
+  - bwa=0.7.15
+  - samtools=1.9
+  - bcftools=1.9

@@ -1,0 +1,30 @@
+channels:
+  - conda-forge
+  - r
+  - bioconda
+  - defaults
+dependencies:
+  - snakemake=7.25.0
+  - kraken2=2.1.2
+  - bracken=2.8
+  - r
+  - r-devtools
+  - r-ggplot2
+  - r-ggpubr
+  - r-rcolorbrewer
+  - r-reshape2
+  - r-vegan
+  - r-stringi
+  - r-devtools
+  - r-zcompositions
+  - r-compositions
+  - r-rafalib
+  - r-curl
+  - r-data.table
+  - bioconductor-flowcore
+  - krona 
+  - s5cmd
+  - pip
+  - pip:
+    - numpy
+    - anytree
